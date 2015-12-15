@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/rehia/formation-node/issues"
   },
-  "homepage": "https://github.com/rehia/formation-node#readme"
+  "homepage": "https://github.com/rehia/formation-node#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }
