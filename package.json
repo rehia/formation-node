@@ -4,7 +4,8 @@
   "description": "Supports des exercices de la formation Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha ch3/test/",
+    "test:watch": "npm test -- -w"
   },
   "repository": {
     "type": "git",
