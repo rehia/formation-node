@@ -1,0 +1,23 @@
+{
+  "name": "formation-node",
+  "version": "1.0.0",
+  "description": "Supports des exercices de la formation Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rehia/formation-node.git"
+  },
+  "keywords": [
+    "node",
+    "formation"
+  ],
+  "author": "Jérôme Avoustin <jerome@rehia.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rehia/formation-node/issues"
+  },
+  "homepage": "https://github.com/rehia/formation-node#readme"
+}
