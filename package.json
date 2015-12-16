@@ -23,6 +23,8 @@
   "homepage": "https://github.com/rehia/formation-node#readme",
   "dependencies": {
     "colors": "^1.1.2",
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "jsonstream": "^1.0.3",
+    "through2": "^2.0.0"
   }
 }
