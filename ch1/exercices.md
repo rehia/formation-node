@@ -8,7 +8,7 @@
 4. Exécuter du code (affectation de variable, définition de fonction sur plusieurs lignes, appel de fonctions...)
 5. Sortir de la REPL (2 fois ctrl+C)
 6. Créer un fichier .js
-  1. Le code doit récupérer le premier argument (prénom, avec `process.argv`), et indiquer dans la console : 'Hello <prenom>!', ou à défaut, 'Hello World!'
+  1. Le code doit récupérer le premier argument (prénom, avec `process.argv`), et indiquer dans la console : 'Hello [prenom]!', ou à défaut, 'Hello World!'
   2. Lancer node sur le fichier créé : `node fichier.js`
 
 ## Todolist
