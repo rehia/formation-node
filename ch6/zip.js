@@ -7,9 +7,9 @@ var zlib = require('zlib');
 
 var config = require('./config.json');
 
-var originalFile = '';
+var originalFile;
 // use path to combine __dirname and 'tweets.json' to create a correct path
-var cryptedFile = '';
+var cryptedFile;
 // use path to combine __dirname and 'tweets.json.crypted.gz' to create a correct path
 
 // open a readstream on originalFile, using createReadStream, with { encoding: 'utf8' } as options
