@@ -5,9 +5,17 @@ var TripDAO = require('./TripDAO');
 
 function TripService() {}
 
+TripService.prototype._findTripsByUser = function (user) {
+  return TripDAO._findTripsByUser(user);
+};
+
+TripService.prototype._getLoggedUser = function () {
+  return UserSession.getInstance().getLoggedUser();
+};
+
 TripService.prototype.getTripsByUser = function (user) {
   var tripList = [];
-  var loggedUser = UserSession.getInstance().getLoggedUser();
+  var loggedUser = this._getLoggedUser();
   var isFriend = false;
   if (loggedUser != null) {
     var friends = user.getFriends();
@@ -19,9 +27,9 @@ TripService.prototype.getTripsByUser = function (user) {
       }
     }
     if (isFriend) {
-      tripList = TripDAO.findTripsByUser(user);
-    }
-    return tripList;
+      tripList = this._findTripsByUser(user);
+  }
+  return tripList;
   } else {
     throw new Error('User not logged in.');
   }
