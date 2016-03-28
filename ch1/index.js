@@ -14,7 +14,7 @@ start();
 
 function start() {
   console.log();
-  prompt.question('What do you want to do ? Create a task, mark a task as Done, List all tasks, Quit >', function (answer) {
+  prompt.question('What do you want to do ? Create a task, mark a task as Done, List all tasks, Quit > ', function (answer) {
     switch (answer.toLowerCase()) {
       case 'c':
         create();
@@ -30,7 +30,7 @@ function start() {
         break;
       default:
         console.log();
-        console.log('Sorry, I didn’t understand... (c, d, l, q)');
+        console.log('Sorry, I didn’t understand... (c, d, l, q) ');
         start();
     }
   });
@@ -38,7 +38,7 @@ function start() {
 
 function create() {
   console.log();
-  prompt.question('What is the description of the task ?', function (answer) {
+  prompt.question('What is the description of the task ? ', function (answer) {
     var id = todoList.create(new Todo(answer));
     console.log('new task created with id ' + id);
     list();
@@ -47,8 +47,12 @@ function create() {
 
 function list() {
   console.log();
-  console.log('Here is your todo list..');
+  console.log('Here is your todo list...');
+  console.log('---------------------------------------');
+  console.log('|   id    |     description    | done |');
+  console.log('---------------------------------------');
   console.log(todoList.toString());
+  console.log('---------------------------------------');
   start();
 }
 
@@ -56,7 +60,7 @@ function markAsDone() {
   console.log();
   prompt.question('Which task have you done (give the id) ? ', function (answer) {
     todoList.markAsDone(answer);
-    console.log('task with id ' + id + ' has been marked as done');
+    console.log('task with id ' + answer + ' has been marked as done');
     list();
   });
 }
